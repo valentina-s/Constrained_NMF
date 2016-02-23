@@ -1,4 +1,4 @@
-
+<a href='https://travis-ci.org/valentina-s/Constrained_NMF'><img src='https://secure.travis-ci.org/valentina-s/Constrained_NMF.png?branch=testing'></a>
 
 Python translation of Constrained Non-negative Matrix Factorization algorithm for source extraction from calcium imaging data. 
 
