@@ -6,6 +6,13 @@ python:
 compiler:
   - gcc
 
+addons:
+  apt:
+    packages:
+    - libatlas-dev
+    - libatlas-base-dev
+    - liblapack-dev
+
 env:
   - CONDA_DEPS="pip flake8 nose coverage numpy scipy matplotlib" PIP_DEPS="coveralls"
 
