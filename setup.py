@@ -48,7 +48,7 @@ setup(
     data_files = [	('', ['LICENSE.txt']),
                   ('', ['README.md'])],
     install_requires = [ 'python==2.7.*','matplotlib', 'scikit-learn', 'scikit-image', 'ipyparallel','ipython','scipy','numpy','tifffile','cvxopt','picos','cvxpy','joblib>=0.8.4']
-    #include_dirs = [incdir, np.get_include()]
+    include_dirs = [incdir, np.get_include()]
     #,'bokeh','jupyter',
 
 )
