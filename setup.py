@@ -13,7 +13,7 @@ here = path.abspath(path.dirname(__file__))
 with open('README.md','r') as rmf:
     readme = rmf.read()
 
-incdir = os.path.join(get_python_inc(plat_specific=1), 'Numerical')
+# incdir = os.path.join(get_python_inc(plat_specific=1), 'Numerical')
 
 setup(
     name = 'Constrained_NMF',
@@ -48,7 +48,7 @@ setup(
     data_files = [	('', ['LICENSE.txt']),
                   ('', ['README.md'])],
     install_requires = [ 'python==2.7.*','matplotlib', 'scikit-learn', 'scikit-image', 'ipyparallel','ipython','scipy','numpy','tifffile','cvxopt','picos','cvxpy','joblib>=0.8.4'],
-    include_dirs = [incdir, np.get_include()]
+    include_dirs = [np.get_include()]
     #,'bokeh','jupyter',
 
 )
