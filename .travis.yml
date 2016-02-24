@@ -5,6 +5,7 @@ python:
 
 compiler:
   - gcc
+  - gfortran
 
 addons:
   apt:
