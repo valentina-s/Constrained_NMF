@@ -23,6 +23,7 @@ install:
 # creating the conda environment
 - conda create -q -n CNMF python=$TRAVIS_PYTHON_VERSION
 - source activate CNMF
+- conda install openblas
 - python setup.py install
 
 #install:
