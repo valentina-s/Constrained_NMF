@@ -13,7 +13,7 @@ here = path.abspath(path.dirname(__file__))
 with open('README.md','r') as rmf:
     readme = rmf.read()
 
-#incdir = os.path.join(get_python_inc(plat_specific=1), 'Numerical')
+incdir = os.path.join(get_python_inc(plat_specific=1), 'Numerical')
 
 setup(
     name = 'Constrained_NMF',
