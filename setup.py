@@ -1,7 +1,7 @@
 from setuptools import setup
 from os import path
-#import os
-#import numpy as np
+import os
+import numpy as np
 
 
 """
