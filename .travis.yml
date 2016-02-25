@@ -13,7 +13,7 @@ addons:
     - libatlas-dev
     - libatlas-base-dev
     - liblapack-dev
-    - gfortran-4.9
+    - gfortran
 
 env:
   - CONDA_DEPS="pip flake8 nose coverage numpy scipy matplotlib" PIP_DEPS="coveralls"
