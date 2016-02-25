@@ -5,7 +5,7 @@ python:
 
 compiler:
   - gcc
-  - gfortran
+#  - gfortran
 
 addons:
   apt:
@@ -38,6 +38,7 @@ install:
 - conda install openblas
 - conda install numpy
 - conda install scipy
+- conda install scikit-learn
 - python setup.py install
 
 #install:
@@ -60,6 +61,9 @@ before_cache:
 cache:
   directories:
     - $HOME/miniconda
+
+script:
+  - nosetests
 
 # whitelist
 branches:
