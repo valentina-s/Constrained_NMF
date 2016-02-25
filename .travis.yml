@@ -14,7 +14,6 @@ addons:
     - libatlas-base-dev
     - liblapack-dev
     - gfortran
-    - lmkl_lapack95_lp64
 
 env:
   - CONDA_DEPS="pip flake8 nose coverage numpy" PIP_DEPS="coveralls"
@@ -38,6 +37,7 @@ install:
 - source activate CNMF
 - conda install openblas
 - conda install numpy
+- conda install scipy
 - python setup.py install
 
 #install:
