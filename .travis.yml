@@ -39,6 +39,7 @@ install:
 - conda install numpy
 - conda install scipy
 - conda install scikit-learn
+- pip install scikit-learn
 - python setup.py install
 
 #install:
