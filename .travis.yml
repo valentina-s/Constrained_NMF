@@ -26,7 +26,7 @@ before_install:
 - wget -q http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh -O miniconda.sh
 - bash miniconda.sh -b -f -p $MINICONDA
 - conda config --set always_yes yes
-#- conda update conda
+- conda update --yes conda
 - conda info -a
 - conda install python=$TRAVIS_PYTHON_VERSION $CONDA_DEPS
 #- travis_retry pip install $PIP_DEPS
@@ -41,6 +41,7 @@ install:
 - conda install scikit-learn
 - pip install scikit-learn
 - python setup.py install
+- conda install nose
 
 #install:
 #- python setup.py install --record installed_files.txt
