@@ -1,6 +1,6 @@
 import numpy as np
-#from sklearn.decomposition import NMF
-#from skimage.transform import downscale_local_mean, resize
+from sklearn.decomposition import NMF
+from skimage.transform import downscale_local_mean, resize
 import scipy.ndimage as nd
 import scipy.sparse as spr
 import scipy

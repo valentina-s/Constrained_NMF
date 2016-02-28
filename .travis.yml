@@ -33,7 +33,7 @@ before_install:
 
 install:
 # creating the conda environment
-- conda create -q -n CNMF python=$TRAVIS_PYTHON_VERSION
+- conda create -q -n CNMF python=$TRAVIS_PYTHON_VERSION CONDA_DEPS
 - source activate CNMF
 - conda install openblas
 - conda install numpy
