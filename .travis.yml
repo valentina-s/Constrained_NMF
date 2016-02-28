@@ -65,7 +65,7 @@ install:
 #    - $HOME/miniconda
 
 script:
-  - nosetests
+  - /usr/bin/nosetests
 
 # whitelist
 branches:
