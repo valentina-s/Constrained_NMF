@@ -41,6 +41,7 @@ install:
 - conda install scikit-learn
 - pip install scikit-learn
 - conda install psutil
+- conda install pims
 - python setup.py install
 - conda install nose
 
@@ -67,6 +68,7 @@ install:
 #    - $HOME/miniconda
 
 script:
+  - python -c "import numpy; print numpy.version.version"
   - nosetests
 
 # whitelist
