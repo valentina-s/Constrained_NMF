@@ -45,8 +45,6 @@ def CNMFSetParms(Y, K=30, gSig=[5, 5], ssub=1, tsub=1, p=2, **kwargs):
     d1, d2, T = Y.shape
     # roughly number of cores on your machine minus 1
     n_processes = np.maximum(psutil.cpu_count() - 2, 1)
-
-    n_processes = 1
     print 'using ' + str(n_processes) + ' processes'
     n_pixels_per_process = d1 * d2 / n_processes  # how to subdivide the work among processes
 
@@ -83,7 +81,7 @@ def CNMFSetParms(Y, K=30, gSig=[5, 5], ssub=1, tsub=1, p=2, **kwargs):
         'dist': 3,                       # expansion factor of ellipse
         'n_processes': n_processes,      # number of process
         'n_pixels_per_process': n_pixels_per_process,    # number of pixels to be processed by eacg worker
-        'backend': 'single_thread',
+        'backend': 'ipyparallel',
         'memory_efficient': False
     }
     options['temporal_params'] = {
@@ -95,7 +93,7 @@ def CNMFSetParms(Y, K=30, gSig=[5, 5], ssub=1, tsub=1, p=2, **kwargs):
         'solvers': ['ECOS', 'SCS'],
         'p': p,                      # order of AR indicator dynamics
         'n_processes': n_processes,
-        'backend': 'single_thread',
+        'backend': 'ipyparallel',
         'memory_efficient': False,
         # flag for setting non-negative baseline (otherwise b >= min(y))
         'bas_nonneg': True,
@@ -269,8 +267,6 @@ def com(A, d1, d2):
     cm = np.zeros((nr, 2))        # vector for center of mass
     cm[:, 0] = np.dot(Coor['x'].T, A) / A.sum(axis=0)
     cm[:, 1] = np.dot(Coor['y'].T, A) / A.sum(axis=0)
-
-
 
     return cm
 
