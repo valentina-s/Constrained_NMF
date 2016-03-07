@@ -44,6 +44,7 @@ install:
 # - conda install pims
 - python setup.py install
 - conda install nose
+- conda install ipyparallel
 
 #install:
 #- python setup.py install --record installed_files.txt
@@ -68,7 +69,7 @@ install:
 #    - $HOME/miniconda
 
 script:
-  - python -c "import numpy; print numpy.version.version"
+  # - python -c "import numpy; print numpy.version.version"
   - nosetests
 
 # whitelist

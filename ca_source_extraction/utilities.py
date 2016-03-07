@@ -45,6 +45,7 @@ def CNMFSetParms(Y, K=30, gSig=[5, 5], ssub=1, tsub=1, p=2, **kwargs):
     d1, d2, T = Y.shape
     # roughly number of cores on your machine minus 1
     n_processes = np.maximum(psutil.cpu_count() - 2, 1)
+    n_processes = 1
     print 'using ' + str(n_processes) + ' processes'
     n_pixels_per_process = d1 * d2 / n_processes  # how to subdivide the work among processes
 
