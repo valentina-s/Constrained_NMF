@@ -44,6 +44,7 @@ install:
 - python setup.py install
 - conda install nose
 - conda install ipyparallel
+- conda install numpy
 
 #install:
 #- python setup.py install --record installed_files.txt
