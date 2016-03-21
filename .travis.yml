@@ -38,8 +38,6 @@ install:
 - conda install openblas
 - conda install numpy
 - conda install scipy
-- conda install scikit-learn
-- pip install scikit-learn
 - conda install psutil
 - python setup.py install
 - conda install nose
