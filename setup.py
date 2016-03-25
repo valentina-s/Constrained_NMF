@@ -49,7 +49,6 @@ setup(
                   ('', ['README.md'])],
     install_requires = [ 'python==2.7.*','tifffile','cvxopt','picos','cvxpy','joblib>=0.8.4'],
     # install_requires = ['python==2.7.*']
-    include_dirs = [np.get_include()]
+    # include_dirs = [np.get_include()]
     #,'bokeh','jupyter',
-
 )
