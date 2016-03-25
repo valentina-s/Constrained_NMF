@@ -33,14 +33,17 @@ before_install:
 
 install:
 # creating the conda environment
-- conda create -q -n CNMF  python=$TRAVIS_PYTHON_VERSION scikit-learn
-- python --version
-- source activate CNMF
+#- conda create -q -n CNMF  python=$TRAVIS_PYTHON_VERSION scikit-learn
+#- python --version
+- conda install scikit-learn
+# - source activate CNMF
 - conda install psutil
 - python setup.py install
 - conda install nose
 - conda install ipyparallel
 - conda install scikit-image
+
+
 
 #install:
 #- python setup.py install --record installed_files.txt
@@ -66,6 +69,7 @@ install:
 
 script:
   # - python -c "import numpy; print numpy.version.version"
+  - which nosetests
   - nosetests
 
 # whitelist
