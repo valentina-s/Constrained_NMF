@@ -48,7 +48,7 @@ setup(
     data_files = [	('', ['LICENSE.txt']),
                   ('', ['README.md'])],
     # install_requires = [ 'python==2.7.*','tifffile','cvxopt','picos','cvxpy'],
-    install_requires = ['tifffile','picos']
+    install_requires = ['tifffile','picos','cvxpy']
     # install_requires = ['python==2.7.*']
     # include_dirs = [np.get_include()]
     #,'bokeh','jupyter',
