@@ -42,6 +42,10 @@ install:
 - conda install nose
 - conda install ipyparallel
 - conda install scikit-image
+- conda install tifffile
+- conda install cvxopt
+- conda install picos
+- conda install cvxpy
 
 
 
