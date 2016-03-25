@@ -43,6 +43,7 @@ install:
 - conda install nose
 - conda install ipyparallel
 - conda install numpy
+- conda install scikit-image
 
 #install:
 #- python setup.py install --record installed_files.txt
