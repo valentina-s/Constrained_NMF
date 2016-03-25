@@ -33,7 +33,7 @@ before_install:
 
 install:
 # creating the conda environment
-- conda create -q -n CNMF python=$TRAVIS_PYTHON_VERSION scikit-learn
+- conda create -q -n CNMF  python=$TRAVIS_PYTHON_VERSION scikit-learn
 - source activate CNMF
 - conda install openblas
 - conda install numpy

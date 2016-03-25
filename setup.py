@@ -47,7 +47,8 @@ setup(
     packages = ['ca_source_extraction','SPGL1_python_port'],
     data_files = [	('', ['LICENSE.txt']),
                   ('', ['README.md'])],
-    install_requires = [ 'python==2.7.*','matplotlib', 'scikit-learn', 'scikit-image', 'ipyparallel','ipython','scipy','numpy','tifffile','cvxopt','picos','cvxpy','joblib>=0.8.4'],
+    install_requires = [ 'python==2.7.*','tifffile','cvxopt','picos','cvxpy','joblib>=0.8.4'],
+    # install_requires = ['python==2.7.*']
     include_dirs = [np.get_include()]
     #,'bokeh','jupyter',
 
