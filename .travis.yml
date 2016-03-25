@@ -43,7 +43,6 @@ install:
 - conda install ipyparallel
 - conda install scikit-image
 - conda install cvxopt
-- conda install picos
 - conda install cvxpy
 
 
