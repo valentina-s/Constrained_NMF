@@ -41,9 +41,9 @@ install:
 - conda install ipyparallel
 - conda install scikit-image
 - conda install cvxopt
-# - conda install -c https://conda.anaconda.org/omnia cvxpy
-# - conda install -c https://conda.anaconda.org/conda-forge tifffile
-# - conda install 
+- conda install -c https://conda.anaconda.org/omnia cvxpy
+- conda install -c https://conda.anaconda.org/conda-forge tifffile
+# - conda install
 
 
 
