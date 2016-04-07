@@ -21,12 +21,11 @@ RUN conda install -c https://conda.anaconda.org/omnia cvxpy
 RUN conda install -c https://conda.anaconda.org/conda-forge tifffile
 RUN git clone --recursive https://github.com/valentina-s/Constrained_NMF.git
 WORKDIR /Constrained_NMF/
-RUN ls -a
 RUN git checkout docker
 RUN apt-get install libc6-i386
 RUN apt-get install -y libsm6 libxrender1
 RUN conda install pyqt
 RUN python setup.py install
-RUN nosetests
+# RUN nosetests
 
 EXPOSE 8080

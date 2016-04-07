@@ -5,10 +5,10 @@ services:
 
 before_install:
   - docker build -t valentina/constrained_nmf .
-  - docker run -d -p 127.0.0.1:80:4567 valentina/constrained_nmf /bin/sh -c "ls"
+
 
 script:
-  - docker ps
+  - docker run -d -p 127.0.0.1:80:4567 valentina/constrained_nmf /bin/sh -c "nosetests"
 
 
 # whitelist
