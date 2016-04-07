@@ -8,8 +8,7 @@ before_install:
   - docker run -d -p 127.0.0.1:80:4567 valentina/constrained_nmf /bin/sh -c "ls"
 
 
-script:
-  - nosetests
+
 
 # whitelist
 branches:
