@@ -3,13 +3,13 @@ FROM ubuntu
 RUN apt-get update
 RUN apt-get install -y libglib2.0-0
 RUN apt-get install -y git wget
-RUN export ANACONDA=$HOME/anaconda
-RUN export PATH="$ANACONDA/bin:$PATH"
+RUN export MINICONDA=$HOME/miniconda
+RUN export PATH="$MINICONDA/bin:$PATH"
 RUN hash -r
 RUN wget -q https://3230d63b5fc54e62148e-c95ac804525aac4b6dba79b00b39d1d3.ssl.cf1.rackcdn.com/Anaconda2-2.5.0-Linux-x86_64.sh -O anaconda.sh
-# RUN bash anaconda.sh -b -p $ANACONDA
-RUN bash anaconda.sh -p /anaconda -b
-ENV PATH=/anaconda/bin:${PATH}
+# RUN bash anaconda.sh -b -p $MINICONDA
+RUN bash anaconda.sh -p /miniconda -b
+ENV PATH=/miniconda/bin:${PATH}
 RUN conda config --set always_yes yes
 RUN conda update --yes conda
 RUN conda info -a
