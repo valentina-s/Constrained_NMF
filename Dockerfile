@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:14.04
 
 RUN apt-get update
 RUN apt-get install -y libglib2.0-0
