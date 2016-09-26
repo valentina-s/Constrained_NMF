@@ -1,4 +1,4 @@
-FROM ubuntu:14.04.03
+FROM ubuntu:14.04
 
 RUN apt-get update
 RUN apt-get install -y libglib2.0-0
@@ -25,7 +25,7 @@ WORKDIR /Constrained_NMF/
 # RUN git checkout docker
 RUN apt-get install libc6-i386
 RUN apt-get install -y libsm6 libxrender1
-RUN conda install pyqt
+RUN conda install pyqt4
 RUN python setup.py install
 # RUN nosetests
 
