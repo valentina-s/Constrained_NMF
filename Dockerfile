@@ -4,7 +4,6 @@ RUN apt-get update
 RUN apt-get install -y libglib2.0-0
 RUN apt-get install -y git wget
 RUN apt-get install bzip2
-RUN apt-get install python-qt4
 RUN export MINICONDA=$HOME/miniconda
 RUN export PATH="$MINICONDA/bin:$PATH"
 RUN hash -r
@@ -26,7 +25,7 @@ WORKDIR /Constrained_NMF/
 # RUN git checkout docker
 RUN apt-get install libc6-i386
 RUN apt-get install -y libsm6 libxrender1
-RUN conda install pyqt4
+RUN conda install pyqt=4.11.4
 RUN python setup.py install
 # RUN nosetests
 
